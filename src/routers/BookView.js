@@ -1,19 +1,24 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { json, Link } from 'react-router-dom';
 import { deletBook } from '../features/bookSlice';
+import table from "./BookView.css"
 
 const BookView = () => {
-    const books =useSelector((state)=>state.bookReducer.books);
+    // const booke =useSelector((state)=>state.bookReducer.books);
+    const bookg=localStorage.getItem("books");
+    const booke =JSON.parse(bookg);
+   
+    console.log(booke)
     const dispatch=useDispatch()
-    console.log(books);
+   
     const handleRemove =(id)=>{
         dispatch(deletBook(id));
     }
     return (
         <div>
             <h2>List of books.........</h2>
-            <table>
+            <table className='table'>
                 <thead>
                     <tr>
                       
@@ -23,7 +28,7 @@ const BookView = () => {
                     </tr>
                 </thead>
                 <tbody>
-                {books.map((book)=>{
+                {booke.books.map((book)=>{
                    const{id,title,author}=book;
                    return(
                     <tr>

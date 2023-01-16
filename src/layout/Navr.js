@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import {nav,link} from "./Navr.css"
 const Navr = () => {
     return (
         <div>
-            <nav>
-                <Link to='/'>Home</Link>
-                <Link to='/add-book'>Add Book</Link>
-                <Link to='/show-book'>Show Book</Link>
+            <nav className='nav'>
+                <Link className='link' to='/'>Home</Link>
+                <Link className='link' to='/add-book'>Add Book</Link>
+                <Link  className='link' to='/show-book'>Show Book</Link>
             </nav>
         </div>
     );
