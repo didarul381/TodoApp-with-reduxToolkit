@@ -6,15 +6,18 @@ table {
     background-color: rgba(0, 0, 0, 0.596);
     font-size: 1.3rem;
     color:white ;
+    font-family: Arial, Helvetica, sans-serif;
    
   }
   td, th {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   tr:nth-child(even) {
     background-color: #dddddd;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
     
   }

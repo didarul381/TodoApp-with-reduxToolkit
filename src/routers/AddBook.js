@@ -44,7 +44,7 @@ const AddBook = () => {
                 }></input>
                 <br>
                 </br>
-                <button type='submit'>Update Book</button>
+                <button type='submit'>Add Book</button>
             </form>
         </div>
     );
